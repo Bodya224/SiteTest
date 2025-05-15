@@ -1,5 +1,6 @@
 body {
     background-color: #fffff5;
+    overflow-x: hidden;
 }
 
 :root {
@@ -14,17 +15,10 @@ body {
 }
 
 header {
-    width: 6%;
-    height: 70px;
+    width: 1600px;
+    height: 500px;
     background-color: cornflowerblue;
     display: flex;
-    justify-content: end;
-    align-items: center;
-    position: fixed;
-    top: 4px;
-    right: 0;
-    border-bottom-left-radius: 60px;
-    border-top-left-radius: 60px;
 }
 
 .header2 {
@@ -43,16 +37,33 @@ header {
 
 .menu_btn {
     border-radius: 100%;
+    height: 60px;
+    width: 60px;
+    border: 1px rgb(18, 93, 233) solid;
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+    right: 10px;
+    cursor: pointer;
+    top: 20px;
+}
+
+.menu_btn2 {
+    border-radius: 100%;
     height: 45px;
     width: 45px;
     border: 1px rgb(18, 93, 233) solid;
     transition: transform 0.3s ease-in-out;
-    position: absolute;
+    position: fixed;
     right: 10px;
     cursor: pointer;
+    top: 20px;
 }
 
 .menu_btn:hover {
+    transform: rotate(-15deg) scale(1.1);
+}
+
+.menu_btn2:hover {
     transform: rotate(-15deg) scale(1.1);
 }
 
@@ -71,6 +82,16 @@ header {
     z-index: 1;
     top: 70px;
     right: 1px;
+}
+
+.content2_1 {
+    display: none;
+    position: absolute;
+    background-color: #e6f0ff;
+    width: 250px;
+    z-index: 1;
+    top: 90px;
+    left: 1250px;
 }
 
 .content a {
@@ -187,7 +208,7 @@ footer {
     font-family: var(--font);
     font-optical-sizing: auto;
     background-color: royalblue;
-    
+
     border-radius: 20px;
     padding-left: 15px;
     padding-right: 15px;
@@ -208,7 +229,7 @@ footer {
     height: 2px;
     background-color: white;
     transform: scaleX(0);
-    transform-origin:center;
+    transform-origin: center;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -243,12 +264,13 @@ ol {
 
 .pg5 {
     margin-top: 120px;
-    margin-left: 150px;
-    width: 1000px;
-    height: 200px;
+    margin-left: 600px;
+    width: 300px;
+    height: 500px;
     background-color: rgb(214, 211, 211);
     border-radius: 60px;
     display: flex;
+    flex-direction: column;
 }
 
 .test {
@@ -283,14 +305,15 @@ table {
     margin-right: auto;
 }
 
-td, th {
+td,
+th {
     border: 1px black solid;
 }
 
 .cube {
     width: 90px;
     height: 40px;
-    color: white;    
+    color: white;
     font-size: 18px;
     padding-bottom: 0;
     padding-bottom: 5px;
@@ -329,7 +352,7 @@ td, th {
     background-color: #e6f0ff;
     width: 250px;
     z-index: 1;
-    bottom: 80px;
+    bottom: 50px;
     right: 1px;
 }
 
@@ -432,6 +455,110 @@ td, th {
     padding: 0;
 }
 
+.head_box {
+    display: block;
+    flex-wrap: nowrap;
+    height: 300px;
+}
+
+.logo {
+    height: 90px;
+    width: 90px;
+    display: inline;
+    top: 5px;
+    position: relative;
+    left: 50px;
+}
+
+.head_text1 {
+    display: block;
+    color: white;
+    font-size: 36px;
+    height: 100px;
+    position: relative;
+    width: 100%;
+    left: 180px;
+    bottom: 80px;
+}
+
+.head_text2 {
+    display: block;
+    color: white;
+    font-size: 36px;
+    height: 50px;
+    position: relative;
+    width: 700px;
+    bottom: 100px;
+    left: 170px;
+}
+
+.head_text3 {
+    display: block;
+    color: white;
+    font-size: 52px;
+    height: 30px;
+    position: relative;
+    left: 600px;
+    bottom: 60px;
+}
+
+.arrow_element1 {
+    position: relative;
+    height: 80px;
+    width: 10px;
+    background-color: white;
+    left: 735px;
+    border-radius: 20px;
+}
+
+.arrow_element2 {
+    position: relative;
+    height: 50px;
+    width: 10px;
+    background-color: white;
+    left: 755px;
+    border-radius: 20px;
+    rotate: 55deg;
+    bottom: 40px;
+}
+
+.arrow_element3 {
+    position: relative;
+    height: 50px;
+    width: 10px;
+    background-color: white;
+    left: 715px;
+    border-radius: 20px;
+    rotate: -55deg;
+    bottom: 90px;
+}
+
+.box_arrow {
+    animation: move 2s ease-in-out infinite;
+}
+
+.test_text {
+    margin-left: 30px;
+}
+
+.test1 {
+    margin-top: 0;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 @media (max-width:390px) {
     p {
         width: 95%;
@@ -459,13 +586,53 @@ td, th {
     }
 
     header {
-        height: 45px;
+        background-color: cornflowerblue;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        position: fixed;
+        top: 4px;
+        right: 0;
+        border-bottom-left-radius: 60px;
         border-top-left-radius: 60px;
-        width: 17%;
-        top: 8px;
+        width: 18%;
+        height: 50px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .arrow_element1 {
+        display: none;
+    }
+
+    .arrow_element2 {
+        display: none;
+    }
+
+    .arrow_element3 {
+        display: none;
+    }
+
+    .head_text1 {
+        display: none;
+    }
+
+    .head_box {
+        display: none;
+    }
+
+    .head_text2 {
+        display: none;
+    }
+
+    .head_text3 {
+        display: none;
     }
 
     .menu_btn {
+        top: 10px;
         height: 38px;
         width: 38px;
     }
@@ -483,7 +650,7 @@ td, th {
         margin-top: 40px;
     }
 
-    h2   {
+    h2 {
         margin-top: 60px;
     }
 
@@ -542,117 +709,6 @@ td, th {
         width: 260px;
         margin-right: 0;
         padding-left: 10px;
-    }
-
-    video {
-        width: 280px;
-    }
-
-    .pg5 {
-        flex-direction: column;
-        width: 300px;
-        margin-left: 50px;
-        height: 500px;
-    }
-}
-
-@media (min-width: 391px) and (max-width: 500px)
-{
-    p {
-        width: 95%;
-    }
-
-    footer {
-        height: 135px;
-    }
-
-    .foot_txt1 {
-        width: 200px;
-        font-size: 18px;
-        margin-top: 5px;
-    }
-
-    .foot_txt2 {
-        font-size: 18px;
-        margin-top: 110px;
-    }
-
-    .foot_txt3 {
-        margin-top: 5px;
-        width: 200px;
-        font-size: 18px;
-    }
-
-    header {
-        height: 55px;
-        border-top-left-radius: 60px;
-        width: 20%;
-        top: 8px;
-    }
-
-    .dropdown {
-        margin-right: 3px;
-        margin-bottom: 55px;
-    }
-
-    .menu_btn:hover {
-        transform: translateX(-5px) rotate(-15deg) scale(1.1);
-    }
-
-    .first_rem {
-        margin-top: 0;
-    }
-
-    h2   {
-        margin-top: 70px;
-    }
-
-    .headrev {
-        background-color: royalblue;
-        margin-bottom: 24px;
-        border-radius: 20px;
-        margin-top: 25px;
-        margin-right: 120px;
-    }
-
-    .headrev:hover {
-        transform: translateX(0);
-    }
-
-    .headrev::after {
-        width: 70%;
-        left: 15px;
-    }
-
-    table {
-        margin-top: 70px;
-    }
-
-    .img_adapt2 {
-        width: 300px;
-    }
-
-    .navigation {
-        bottom: 15px;
-        right: 15px;
-    }
-
-    .content2 {
-        bottom: 60px;
-        width: 200px;
-    }
-
-    .content3 {
-        right: 30px;
-        width: 200px;
-    }
-
-    .btn3 {
-        width: 200px;
-    }
-
-    .img_adapt {
-        width: 260px;
     }
 
     video {
