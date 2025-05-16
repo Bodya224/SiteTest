@@ -533,6 +533,62 @@ th {
     bottom: 90px;
 }
 
+.arrow_element4 {
+    position: relative;
+    height: 3px;
+    width: 700px;
+    background-color: yellow;
+    bottom: 320px;
+    left: 400px;
+}
+
+.arrow_element5 {
+    position: relative;
+    height: 3px;
+    width: 700px;
+    background-color: yellow;
+    bottom: 420px;
+    left: 400px;
+}
+
+.arrow_element6 {
+    position: relative;
+    height: 3px;
+    width: 100px;
+    background-color: yellow;
+    bottom: 375px;
+    left: 350px;
+    rotate: 90deg;
+}
+
+.arrow_element7 {
+    position: relative;
+    height: 3px;
+    width: 100px;
+    background-color: yellow;
+    bottom: 378px;
+    left: 1050px;
+    rotate: 90deg;
+}
+
+.arrow_element8 {
+    position: relative;
+    height: 3px;
+    width: 420px;
+    background-color: yellow;
+    bottom: 380px;
+    left: -22px;
+}
+
+.arrow_element9 {
+    position: relative;
+    height: 3px;
+    width: 400px;
+    background-color: yellow;
+    bottom: 380px;
+    left: 1100px;
+}
+
 .box_arrow {
     animation: move 2s ease-in-out infinite;
 }
@@ -560,6 +616,42 @@ th {
 }
 
 @media (max-width:390px) {
+    .arrow_element9 {
+        display: none;
+    }
+
+    .arrow_element8 {
+        display: none;
+    }
+
+    .arrow_element7 {
+        display: none;
+    }
+
+    .arrow_element6 {
+        display: none;
+    }
+
+    .arrow_element5 {
+        display: none;
+    }
+
+    .arrow_element4 {
+        display: none;
+    }
+
+    .arrow_element3 {
+        display: none;
+    }
+
+    .arrow_element2 {
+        display: none;
+    }
+
+    .arrow_element1 {
+        display: none;
+    }
+
     p {
         width: 95%;
     }
