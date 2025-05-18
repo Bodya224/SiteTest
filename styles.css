@@ -498,8 +498,11 @@ th {
     font-size: 52px;
     height: 30px;
     position: relative;
-    left: 600px;
+    left: 650px;
     bottom: 60px;
+    width: 250px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .arrow_element1 {
@@ -615,7 +618,17 @@ th {
     }
 }
 
-@media (max-width:390px) {
+@media (max-width:400px) {
+    .content2_1 {
+        margin-right: 100px;
+        left: -230px;
+        top: 60px;
+    }
+
+    .box_arrow {
+        display: none;
+    }
+
     .arrow_element9 {
         display: none;
     }
@@ -637,18 +650,6 @@ th {
     }
 
     .arrow_element4 {
-        display: none;
-    }
-
-    .arrow_element3 {
-        display: none;
-    }
-
-    .arrow_element2 {
-        display: none;
-    }
-
-    .arrow_element1 {
         display: none;
     }
 
@@ -692,18 +693,6 @@ th {
     }
 
     .logo {
-        display: none;
-    }
-
-    .arrow_element1 {
-        display: none;
-    }
-
-    .arrow_element2 {
-        display: none;
-    }
-
-    .arrow_element3 {
         display: none;
     }
 
